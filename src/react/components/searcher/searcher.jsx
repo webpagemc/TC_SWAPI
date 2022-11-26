@@ -1,8 +1,10 @@
-import React from "react";
+import React,{useState} from "react";
 
 export default function Searcher(props){
 
-    const [value,setValue] = useState("");
+  fetch("https://swapi.dev/api/people").then((res)=>{res.json()}).then((elements)=>{console.log(elements)})
+
+    const [value,setValue] = useState([]);
     const change = (e)=>{ setValue(e.target.value)}
 
     const product = []
@@ -28,6 +30,7 @@ export default function Searcher(props){
         <input type="search" name="buscador" id="searcher" placeholder="look for a character" className="searcher_input" value={value} onChange={change} />
         
         </div>
+        
         
       )
 }
