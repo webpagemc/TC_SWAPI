@@ -1,6 +1,6 @@
 import React from 'react';
 import {createRoot} from 'react-dom/client';
-import Home from "./components/home"
+import Home from "./pages/home"
 
 const root = createRoot(document.getElementById('root'));
 

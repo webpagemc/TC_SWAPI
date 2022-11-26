@@ -1,0 +1,61 @@
+/*Variables*/
+$blackblue: rgba(2, 2, 70, 0.788);
+
+
+*{
+    color: white;
+    font-family: 'Courier New';
+}
+
+body{
+    background-color: black;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    background:linear-gradient(to bottom, black, $blackblue,black);
+    box-shadow: 0px 1px 10px blue;
+    border-radius: 50px;
+    width: 95vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    input{
+        background: linear-gradient(to right, white, lightblue);
+        border-radius: 50px;
+        border: 2px solid blue;
+        width: 50vmax;
+        height: 3vmax;
+        padding: 2vmax;
+        margin: 20px;
+        text-align: center;
+        color: black;
+        letter-spacing: 3px;
+    }
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0px 20px 0px;
+    img{
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+    }
+    p{
+        font-size: 15px;
+        width: 250px;
+        text-align: center;
+        margin: 20px;
+
+    }
+}
