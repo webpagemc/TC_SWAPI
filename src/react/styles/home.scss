@@ -32,8 +32,7 @@ body{
     input{
         background: linear-gradient(to right, white, lightblue);
         font-size: 1.5vmax;
-        border-radius: 50px;
-        border: 2px solid blue;
+        border-radius: 30px;
         width: 80%;
         height: 3vmax;
         padding: 2vmax;
@@ -41,6 +40,9 @@ body{
         text-align: center;
         color: black;
         letter-spacing: 3px;
+        border: 3px solid black;
+        border-right: 0px;
+        border-bottom: 0px;
     }
 }
 

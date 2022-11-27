@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/webpagemc/TC_SWAPI#readme",
   "dependencies": {
+    "axios": "^1.2.0",
     "bootstrap": "^5.2.3",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
