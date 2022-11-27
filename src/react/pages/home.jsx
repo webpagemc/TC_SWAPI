@@ -11,7 +11,6 @@ import logo from "../images/logo.png"
 
 export default function Home(){
     
-    /* eslint-disable */
     const [character,setCharacter] = useState([{name:"Loading Characters ..."}])
 
     useEffect(() => {
@@ -66,6 +65,7 @@ export default function Home(){
                 }
             )
         }
+        
         </div>
 
          <footer>
