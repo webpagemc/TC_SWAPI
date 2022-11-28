@@ -39,6 +39,20 @@ export default function Home(){
           }
       )
 
+      //pagination
+      
+      const [page,setPage]= useState(0)
+
+      const firstElement = page * 4
+      const lastElement = page * 4 + 4
+      const actualPage = allCharacters.slice(firstElement,lastElement)
+
+      const previousPage = ()=>{ if(page==0){ setPage(0) }else{ setPage(page - 1) }};
+        
+      const nextPage = ()=>{ if(page==2){ setPage(2) }else{ setPage(page + 1) }};
+      
+
+
     //virtual DOM
     return(
         <>
@@ -46,14 +60,14 @@ export default function Home(){
             logo={logo}
             option_1="Home" link_1="/"
             option_2="Info" link_2="/"
-            option_3="Contact" link_3="/"
+            option_3="Contact" link_3="https://mcalodolce.vercel.app"
         ></Header>
 
         <div className="container">
         <input type="search" name="buscador" id="searcher" placeholder="look for a character" className="searcher_input" value={value} onChange={change} />
 
         {
-            allCharacters.map(
+            actualPage.map(
                 (element)=>{
                     return(
 
@@ -69,6 +83,12 @@ export default function Home(){
                 }
             )
         }
+
+        <div className="pagination_container">
+        <button onClick={previousPage}>{"←"}</button>
+        <button onClick={nextPage}>{"→"}</button>
+        </div>
+        
         
         </div>
 

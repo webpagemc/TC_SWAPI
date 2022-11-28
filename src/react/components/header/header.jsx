@@ -38,11 +38,11 @@ export default function Header(props){
 /*
 
 <Header
-    logo={logo.png}
+    logo={logo}
 
     option_1="Home" link_1="/"
-    option_2="Info" link_2="/"
-    option_3="Contact" link_3="/"
+    option_2="Info" link_2="/info"
+    option_3="Contact" link_3="/contact"
 />
 
 */
