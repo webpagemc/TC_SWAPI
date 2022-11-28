@@ -59,7 +59,7 @@ export default function Home(){
         <Header
             logo={logo}
             option_1="Home" link_1="/"
-            option_2="Info" link_2="/"
+            option_2="Info" link_2="#info"
             option_3="Contact" link_3="https://mcalodolce.vercel.app"
         ></Header>
 
@@ -89,6 +89,18 @@ export default function Home(){
         <button onClick={nextPage}>{"→"}</button>
         </div>
         
+        <div className="separation" id="info"></div>
+
+        <div className="info">
+            <div className="info_title">Info</div>
+
+            <div className="info_about_this">
+            Welcome! <br />
+             This web page was made with the objective of fulfilling a Wannabe front-end
+            technical challenge, where the use of a Star Wars api {"(https://swapi.dev/people)"} was implemented.
+            You can filter, search and read data consumed from the api on views rendered from the server.
+            </div>
+        </div>
         
         </div>
 

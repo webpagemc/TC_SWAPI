@@ -67,6 +67,32 @@ body{
         box-shadow: 0px -1px 10px white ;
     }
 
+    .separation{
+        padding: 50px;
+    }
+
+    .info{
+        width: 100%;
+        font-size: 5vmax;
+        color: white;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 40px;
+
+        .info_title{
+            width: 100%;
+            text-align: center;
+        }
+
+        .info_about_this{
+            font-size: 2vmax;
+            text-align: center;
+            width: 80%;
+            padding-bottom: 100px;
+        }
+    }
+
 }
 
 footer{
