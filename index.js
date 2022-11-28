@@ -25,8 +25,8 @@ app.get("/character/:id",(req,res)=>{
 
     const id = req.params.id
 
-    request(`https://swapi.dev/api/people/${id}`,(err,response,body)=>{
-        
+    request(`https://swapi.dev/api/people/${id}`,(err,request_res,body)=>{
+
         if (!err){
             const element = JSON.parse(body);
             res.render("character",{element});
