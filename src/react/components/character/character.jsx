@@ -2,12 +2,15 @@ import React from "react"
 import "./character.scss"
 
 export default function Character(props){
-    
+
+    const url = props.url
+    const id = url.split("/")[5]
+
     return(
-        <a href="/" className="character_container">
+        <a href={`http://localhost:1001/character/${id}`} className="character_container">
             
             <div className="character_name">{props.name}</div>
-            <div className="character_birthday">{props.birthday}</div>
+            <div className="character_birthday"><b>Age:</b>{props.birthday}</div>
 
         </a>
     )

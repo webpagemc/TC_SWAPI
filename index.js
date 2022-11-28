@@ -21,18 +21,18 @@ app.set("views","./src/views")
 app.use(express.static("./src/public"));
 
 //routes
-app.get("/character",(req,res)=>{
+app.get("/character/:id",(req,res)=>{
 
     const id = req.params.id
 
-    request(`https://swapi.dev/api/people/${1}`,(err,response,body)=>{
-
+    request(`https://swapi.dev/api/people/${id}`,(err,response,body)=>{
+        
         if (!err){
             const element = JSON.parse(body);
             res.render("character",{element});
         }
 
     })
-});
+})
 
 app.listen(PORT,()=>{console.log(`Aplication running in port ${PORT}`)});

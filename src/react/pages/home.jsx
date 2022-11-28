@@ -11,7 +11,8 @@ import logo from "../images/logo.png"
 
 export default function Home(){
     
-    const [character,setCharacter] = useState([{name:"Loading Characters ..."}])
+    //characters request config
+    const [character,setCharacter] = useState([{name:"Loading Characters ...",birth_year:"getting data...",url:"/"}])
 
     useEffect(() => {
         fetch(`https://swapi.dev/api/people`)
@@ -23,23 +24,22 @@ export default function Home(){
           })
       }, [])
 
+      //input config
       const [value,setValue] = useState("");
       const change = (e)=>{ setValue(e.target.value)}
 
     const allCharacters = character.filter(
         (element)=>{
 
-            if(element.name.toString().toLowerCase().includes(value.toLowerCase())){
-  
-                return element
-  
-               }else{
-                return 0
-               }
-  
+            if(element.name.toString().toLowerCase().includes(value.toLowerCase()))
+            { return element }
+            else 
+            { return 0 }
+
           }
       )
 
+    //virtual DOM
     return(
         <>
         <Header
@@ -50,16 +50,20 @@ export default function Home(){
         ></Header>
 
         <div className="container">
-
         <input type="search" name="buscador" id="searcher" placeholder="look for a character" className="searcher_input" value={value} onChange={change} />
 
         {
             allCharacters.map(
                 (element)=>{
                     return(
+
                         <Character
+                        key={element.url}
+                        
                         name={element.name}
-                        birthday={element.birth_year}>
+                        birthday={element.birth_year}
+                        url={element.url}>
+
                         </Character>
                     ) 
                 }

@@ -6,7 +6,8 @@ header{
     align-items: center;
     flex-wrap: wrap;
     margin: 0;
-    position: static;
+    position: sticky;
+    top: 0;
     width: 100vw;
     user-select: none;
     overflow: hidden;
