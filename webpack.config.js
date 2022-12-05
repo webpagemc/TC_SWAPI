@@ -9,7 +9,7 @@ module.exports = {
     devServer: {
         historyApiFallback: true
     },
-    watch:true,
+    watch:false,
     mode:"production",
     module:{
         rules:[
